@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.huella {
+  height: 6rem;
+  width: auto;
+}
+
+.titulo {
+  margin-left: 2%;
+  font-size: 4rem;
+  font-family: "handlee";
+}
+
