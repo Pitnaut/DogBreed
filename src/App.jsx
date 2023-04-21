@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import './App.css';
+import './stylesheets/App.css';
 import footsprint from './assets/huella.png';
 import Form from './components/Form';
+import DogCard from './components/DogCard'
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
         <img className="huella" src={footsprint} />
         <h1 className="titulo">Enciclopedia Perruna</h1>  
       </header>
-      <Form />    
+      <Form />
+      <DogCard />    
     </div>
   )
 }
