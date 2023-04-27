@@ -1,22 +1,28 @@
-import React from 'react';
-import carlino from '../assets/carlino.jpg'
+import React, {useState} from 'react';
+import Form from './Form';
+import { dogs } from '../components/Data';
 
-function DogCard ({name, imagen, alttext, origen, frase, trivia}) {
+function DogCard() {
+
+  const [dogId, setDogId] = useState(0)
 
   return (
-    <div className="container">
-      <img 
-        className="fotodog"
-        src={carlino}
-        alt='texto'
-        />
-      <div className="text-container">
-        <p className="dogname">Carlino</p>
-        <p className="origen">China</p>
-        <p className="frase">Hey hola mundo</p>
-        <p className="trivia">'El carlino o pug es un perro pequeño muy sociable y cariñoso. Siempre está llamando la atención de sus amos para conseguir su atención y llevarse unas caricias. No es un buen perro guardían pero al ser recelosos de los extraños puede ser un buen "perro-alarma". Como tienen el hocico muy corto es muy propenso a padecer disnea.'</p>  
-      </div> 
-    </div>
+    <>
+      <Form dogId={dogId} onDogIdChange={setDogId} />
+      <div className="container">
+        <img 
+          className="fotodog"
+          src={`../../public/imagenes/${dogs[dogId].imagen}.jpg`}
+          alt='texto'
+          />
+        <div className="text-container">
+          <p className="dogname">{dogs[dogId].nombre}</p>
+          <p className="origen">{dogs[dogId].origen}</p>
+          <p className="frase">{dogs[dogId].frase}</p>
+          <p className="trivia">{dogs[dogId].trivia}</p>  
+        </div> 
+      </div>
+    </>
   )
 }
 

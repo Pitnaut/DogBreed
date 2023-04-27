@@ -1,19 +1,28 @@
 import React from 'react';
 import { dogs } from '../components/Data';
+import '../stylesheets/Form.css';
 
-function Form () {
+function Form ({ dogId, onDogIdChange }) {
 
+  const handleChange = (e) => {
+    onDogIdChange(e.target.value);
+  }
 
-  
   return (
-    <form>
-      <label for='dogs'>Elige tu perro</label>
-      <select id='dogs'>
-        {dogs.map((dog, index) => (
-          <option key={index} value={dog.name}>{dog.name}</option>
+    <>
+      <label className="choose" htmlFor='dogs'>Elige tu perro:
+      <select value={dogId} onChange={handleChange}>
+        {dogs.map((dog) => (
+          <option
+            className="option" 
+            key={dog.id}
+            value={dog.id} 
+          >
+            {dog.nombre}</option>
         ))}
       </select>
-    </form>
+      </label>
+    </>
   )
 }
 
