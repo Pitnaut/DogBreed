@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Form from './Form';
 import { dogs } from '../components/Data';
+import '../stylesheets/Dogcard.css'
 
 function DogCard() {
 
@@ -10,16 +11,18 @@ function DogCard() {
     <>
       <Form dogId={dogId} onDogIdChange={setDogId} />
       <div className="container">
-        <img 
-          className="fotodog"
+        <div className="fotodog"><img 
           src={`../../public/imagenes/${dogs[dogId].imagen}.jpg`}
-          alt='texto'
+          alt={dogs[dogId].alttext}
           />
+        </div>
         <div className="text-container">
-          <p className="dogname">{dogs[dogId].nombre}</p>
-          <p className="origen">{dogs[dogId].origen}</p>
-          <p className="frase">{dogs[dogId].frase}</p>
-          <p className="trivia">{dogs[dogId].trivia}</p>  
+          <div className="dogintro">
+            <div className="dogname"><h1 >{dogs[dogId].nombre}</h1></div>
+            <div className="frase"><p >{dogs[dogId].frase}</p></div>
+          </div>
+          <div className="origen"><p >{dogs[dogId].origen}</p></div>
+          <div className="trivia"><p >{dogs[dogId].trivia}</p> </div> 
         </div> 
       </div>
     </>
