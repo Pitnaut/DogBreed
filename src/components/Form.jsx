@@ -9,9 +9,9 @@ function Form ({ dogId, onDogIdChange }) {
   }
 
   return (
-    <>
-      <label className="choose" htmlFor='dogs'>Elige tu perro:
-      <select value={dogId} onChange={handleChange}>
+    <div className="dropdown">
+      <label className="choose" htmlFor='dogs'>
+      <select value={dogId} onChange={handleChange} className="buttond">
         {dogs.map((dog) => (
           <option
             className="option" 
@@ -22,7 +22,7 @@ function Form ({ dogId, onDogIdChange }) {
         ))}
       </select>
       </label>
-    </>
+    </div>
   )
 }
 

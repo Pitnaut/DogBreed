@@ -1,0 +1,34 @@
+.dropdown {
+  text-align: right;
+  margin-right: 6%;
+}
+
+.buttond {
+  background-color: #86c6bd;
+  color:  black;
+  padding: 1rem;
+  font-size: 1rem;
+  border: .1rem solid black ;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.option {
+  background-color: #86c6bd;
+  color:  black;
+  border: .1rem solid black ;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+  .dropdown {
+    margin-bottom: 5%;
+    margin-right: 18%
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .dropdown {
+    margin-right: 10%;
+  }
+}

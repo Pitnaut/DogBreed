@@ -6,8 +6,7 @@
   border: .1rem solid black;
   font-family: Raleway;
   background-color: #86c6bd;
-  border-top-right-radius: 5rem;
-  border-bottom-right-radius: 5rem;
+  border-radius: 5rem;
 }
 
 .fotodog {
@@ -18,6 +17,8 @@
 .fotodog img {
   width: auto;
   height: 26rem;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
 }
 
 .text-container {
@@ -49,5 +50,72 @@
 
 .text-container .trivia {
   font-size: 1.7rem;
-  margin-top: 6%;
+  margin-top: 4%;
+  text-align: justify;
+  
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    flex-direction: column;
+    width: 40rem;
+    margin: 0 auto;
+  }
+  .text-container {
+    height: auto;
+  }
+  .text-container .dogintro {
+    height: 4rem;
+  }
+  .fotodog img {
+    width: auto;
+    height: 40rem;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 0;
+  }
+  .text-container .dogname {
+    height: 5rem
+  }
+
+  .text-container .frase {
+    height: 1rem
+  }
+  .text-container .trivia {
+    margin-bottom: 7%;
+    text-align: justify;
+  }
+}
+
+@media only screen and  (max-width: 680px) {
+  .container {
+    width: 20rem;
+    margin: 0 auto;
+  }
+  .text-container .dogintro {
+    display: flex;
+    flex-direction: column;
+    height: 3.5rem;
+    margin-left: 3%;
+  }
+  .text-container .dogname {
+    font-size: 1rem;
+    height: .2rem;
+  }
+  .text-container .frase {
+    font-size: 1.3rem;
+  }
+  .text-container .origen {
+    font-size: 1.7rem;
+    margin-left: 3%;
+  }
+  .text-container .trivia {
+    font-size: 1.5rem;
+    margin-bottom: 12%;
+    margin-left: 3%;
+    text-align: justify;
+  }
+
+  .fotodog img {
+    height: 20rem
+  }
 }

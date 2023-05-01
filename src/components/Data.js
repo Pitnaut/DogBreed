@@ -13,7 +13,7 @@ export const dogs = [{
   imagen: 'galgo',
   alttext: 'Foto de Galgo',
   origen: 'España',
-  frase: 'Si me escapo no me vas a pillar',
+  frase: '¡Corre que te pillo!',
   trivia: 'El galgo es una raza pura, sus características se han logrado por selección a través de los siglos y no por cruces entre razas. Son animales nobles y algo miedosos que se adaptan bien al hogar. Son muy dormilones y no necesitan de demasiada actividad al contrario de lo que comunmente se piensa. Muchos han sufrido maltrato o abandono por lo que es normal que en un principio sean desconfiados.'
 },
 {

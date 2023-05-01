@@ -15,3 +15,15 @@
   font-family: "handlee";
 }
 
+@media only screen and (max-width: 680px) {
+  .header {
+    justify-content: center;
+    margin-top: 5%;
+  }
+  .huella {
+    height: 4rem;
+  }
+  .titulo {
+    font-size: 2rem;
+  }
+}
